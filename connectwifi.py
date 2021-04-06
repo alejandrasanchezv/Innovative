@@ -1,6 +1,7 @@
 #Exercise 2
-#Connect the fipy via wifi and upload firmware
-#use led to inform results
+#The Fipy connects to the wifi network
+#LED: red if it was unable to connect, green connected to wifi
+#Doubt: upload the firmware via Wi-Fi
 
 from network import WLAN
 import machine
