@@ -1,5 +1,5 @@
 #Exercise 2
-#Connect the fipy via wifi and
+#Connect the fipy via wifi and upload firmware
 #use led to inform results
 
 from network import WLAN
