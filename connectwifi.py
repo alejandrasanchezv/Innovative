@@ -19,3 +19,4 @@ while not wlan.isconnected():
     machine.idle() #rest
 
 pycom.rgbled(0x00ff00) #Green
+#print(wlan.ifconfig())
