@@ -13,6 +13,8 @@ while True:
     pycom.rgbled(0x0000ff) #Blue
     time.sleep(5)
 
+
+
 #TESTING DIFFERENT COLORS
 #pycom.rgbled(0xf1447c) #pink
 #time.sleep(5)
