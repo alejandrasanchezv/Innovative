@@ -20,4 +20,3 @@ while not wlan.isconnected():
 
 pycom.rgbled(0x00ff00) #Green
 pybytes.send_signal(1,"Connected")
-#print(wlan.ifconfig())
