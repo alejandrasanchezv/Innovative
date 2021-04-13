@@ -7,10 +7,13 @@ pycom.heartbeat(False)
 
 while True:
     pycom.rgbled(0x00ff00) #Green
+    pybytes.send_signal(0,"Green")
     time.sleep(5) # 5 second wait
     pycom.rgbled(0xff0000) #Red
+    pybytes.send_signal(0,"Red")
     time.sleep(5)
     pycom.rgbled(0x0000ff) #Blue
+    pybytes.send_signal(0,"Blue")
     time.sleep(5)
 
 
