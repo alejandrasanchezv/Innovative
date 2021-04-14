@@ -1,18 +1,14 @@
-#Exercise 2
-#The Fipy connects to the wifi network
-#LED: red if it was unable to connect, green connected to wifi
+#LESS ANNOYING RELEASE
 
 from network import WLAN
 import pycom
+import time
 
 pycom.heartbeat(False) #activate LED
 
-wlan = WLAN()
+pycom.rgbled(0xf1447c) #Pink
+time.sleep(2) 
+pycom.rgbled(0xf39c12) #Red
+time.sleep(2)
 
-while not wlan.isconnected():
-    pycom.rgbled(0xff0000) #Red
-    wlan.init(ssid="FASTWEB-E08271", auth=(WLAN.WPA2, "73FCY921GC"))
-
-pycom.rgbled(0x00ff00) #Green
-pybytes.send_signal(1,"Connected")
-print("Connected")
+pycom.heartbeat(True) #de-activate LED

@@ -12,10 +12,9 @@ wlan = WLAN()
 wlan.init(ssid="FASTWEB-E08271", auth=(WLAN.WPA2, "73FCY921GC"))
 
 while not wlan.isconnected():
-    print("Unable to connect")
     pycom.rgbled(0xff0000) #Red
     wlan.init(ssid="FASTWEB-E08271", auth=(WLAN.WPA2, "73FCY921GC"))
 
 pycom.rgbled(0x00ff00) #Green
-pybytes.send_signal(1,"Connected :)")
+pybytes.send_signal(1,"Connected")
 print("Connected")
