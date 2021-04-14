@@ -10,7 +10,8 @@ from network import Bluetooth
 pycom.heartbeat(False)
 
 #connect to bluetooth
-
+#bluetooth = Bluetooth()
+#bluetooth.connect("Alejandra's iPhone")
 
 #Read sensor data
 #adc = machine.ADC()
