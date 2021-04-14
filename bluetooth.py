@@ -1,5 +1,7 @@
 from network import Bluetooth
 import ubinascii
+import time
+#from ble_advertising import advertising_payload
 
 bluetooth = Bluetooth()
 bluetooth.set_advertisement(name='FiPy', service_uuid=b'1234567890123456')
@@ -17,6 +19,9 @@ bluetooth.advertise(True)
 
 bluetooth.start_scan(-1)
 adv = None
+
+#t = 0
+#i = 0
 while True:
     adv = bluetooth.get_adv()
     if adv:
@@ -27,4 +32,7 @@ while True:
             bluetooth.start_scan(-1)
             continue
         break
-#print("Connected to device with addr = {}".format(ubinascii.hexlify(adv.mac)))
+
+print(".")
+#sensor_bt = bluetooth.service(uuid=b'12345678901234766', isprimary=True, nbr_chars=1)
+#sensor_chr = sensor_bt.characteristic(uuid=0x00012A59, value=1)
