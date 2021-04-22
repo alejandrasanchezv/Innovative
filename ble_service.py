@@ -37,7 +37,8 @@ def conectandobt():
             break
 
 conectandobt()
-i = b'0x45'
+print("hey")
+#i = 15
 sensor_bt = bluetooth.service(uuid=b'1108982705950701', isprimary=True)
-sensor_chr = sensor_bt.characteristic(uuid=b'1108982705950702', value=i)
+sensor_chr = sensor_bt.characteristic(uuid=b'1108982705950702', value=1)
 char_sens = sensor_chr.callback(trigger=Bluetooth.CHAR_WRITE_EVENT | Bluetooth.CHAR_READ_EVENT, handler=char_handler(sensor_chr,5))
