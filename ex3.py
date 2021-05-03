@@ -64,15 +64,15 @@ while True:
 
     #Classify data
     if temp <= 10:
-      pycom.rgbled(0xfdfefe) #white
+      pycom.rgbled(0xffffff) #white
     elif temp > 10 and temp <= 20:
       pycom.rgbled(0x0000ff) #blue
     elif temp > 20 and temp <= 30:
       pycom.rgbled(0x00ff00) #Green
     elif temp > 30 and temp <= 40:
-      pycom.rgbled(0xfefa00) #yellow
+      pycom.rgbled(0xffff00) #yellow
     elif temp > 40:
-      pycom.rgbled(0xf39c12) #orange
+      pycom.rgbled(0xff8c00) #orange
     else:
       pycom.rgbled(0xff0000) #Red
       #data out of range
