@@ -28,6 +28,7 @@ lora.join(activation=LoRa.OTAA, auth=(dev_eui, app_eui, app_key), timeout=0)
 while not lora.has_joined():
     time.sleep(2.5)
     print('Not yet joined...')
+    lora.join(activation=LoRa.OTAA, auth=(dev_eui, app_eui, app_key), timeout=0)
 
 #IM HAVING TROUBLE WITH THE LORA CONNECTION
 

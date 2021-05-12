@@ -6,6 +6,7 @@ from network import Bluetooth
 import ubinascii
 
 pycom.heartbeat(False)
+bluetooth = Bluetooth()
 #pycom.rgbled(0xf1447c) #pink
 
 def conn_bt (bt):
@@ -30,16 +31,15 @@ def scaneando():
 
 def bluetoothlink():
     print('--------- BLUETOOTH ---------')
-    bluetooth = Bluetooth()
     scaneando()
     bluetooth.set_advertisement(name='PepeBot', service_uuid=b'1108982705950701')
     bluetooth.callback(trigger=Bluetooth.CLIENT_CONNECTED | Bluetooth.CLIENT_DISCONNECTED, handler=conn_bt)
     bluetooth.advertise(True)
 
-    rssi = info[0][3]
     print('Bluetooth link info:', info)
+    rssi = info[0][3]
     rssibt = (rssi*-50)/255
-    print('Signal level:',rssi)
+    print('Signal level:',rssibt)
     return rssibt
 
 def wifilink():
